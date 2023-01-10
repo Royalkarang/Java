@@ -1,0 +1,28 @@
+import java.util.*;
+class k_1_Hello {
+    public static void printName() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Yor Name : ");
+        String name = sc.nextLine();
+        System.out.println();
+        System.out.println(name);  
+        sc.close();
+    }
+    public static void main(String[] args) {
+        printName();
+    }
+}
+// import java.util.*;
+// class k_1_Hello {
+//     public static void printName(String name) {
+//         System.out.println(name);  
+//     }
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Enter Yor Name : ");
+//         String name = sc.nextLine();
+//         System.out.println();
+//         printName(name);
+//         sc.close();
+//     }
+// }
