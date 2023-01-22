@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class CountdigitNum {
+    static int Countdigit(int n, int digit){
+        if(n==0){
+            return digit;
+        }
+        n=n/10;
+        return Countdigit(n, digit+1);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Number: ");
+        int n = sc.nextInt();
+        int d =0;
+        System.out.println(Countdigit(n,d));
+        sc.close();
+    }
+}
