@@ -1,0 +1,36 @@
+import java.util.Scanner;
+class upr_or_Lwr{
+      // Check Special Character
+    static void SpecialChar(char ch){
+        if (ch>= 0 && ch <= 47 || ch>= 58 && ch <= 64 || ch>= 91 && ch <= 96 || ch>= 122 && ch <= 150)
+            System.out.println("Special Character....."); 
+        }
+       // Check Small Character
+    static void checkLowerCase(char ch){
+        if (ch>='a' && ch<='z'){
+            System.out.println("Character ! Lower Case....");
+        }
+        SpecialChar(ch);
+    }
+      // check Capital Latter
+    static void checkAlphabet(char ch){
+        if(ch>='A' && ch<='Z'){
+            System.out.println("Character ! Upper Case...");
+        }
+        checkLowerCase(ch);
+    }
+      // Check Number
+    static void checkdata(char ch) {
+        if(ch >= '0' && ch <= '9'){
+            System.out.println("Number...");
+        }
+        checkAlphabet(ch);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Character: ");
+        char ch = sc.next().charAt(0);
+        checkdata(ch);
+        sc.close();
+    }
+}
