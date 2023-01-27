@@ -1,0 +1,19 @@
+import java.util.Scanner;
+class ArrayInput{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Size:- ");
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+
+        for(int i =1;i<n;i++){
+            System.out.print("Enter "+ (i+1)+" Element :-");
+            arr[i]=sc.nextInt();
+        }
+        System.out.println("Elements are:- ");
+        for(int i=1;i<n;i++){
+            System.out.print(arr[i] +"\t");
+        }
+        sc.close();
+    }
+}
