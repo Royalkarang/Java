@@ -1,0 +1,27 @@
+import java.util.Arrays;
+
+public class PairSum {
+    static void approach(int arr[], int k){
+        Arrays.sort(arr);
+        int first=0;
+        int last = arr.length-1;
+        while(first < last) {
+            if(arr[first] + arr[last] ==k){
+                System.out.println("Pair Found : " + arr[first] + ","+arr[last]);
+                return;
+            }
+            if(arr[first]+arr[last] <k){
+                first ++;
+            }
+            else if(arr[last]> k){
+                last --;
+
+            }
+        }
+    }
+    public static void main(String[] args) {
+        int arr[] = {2,9,4,6,3,10,5};
+        int k=16;
+        approach(arr,k);
+    }
+}
